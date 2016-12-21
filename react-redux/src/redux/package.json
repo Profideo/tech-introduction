@@ -1,0 +1,25 @@
+{
+  "name": "react-redux-example",
+  "private": true,
+  "version": "1.0.0",
+  "dependencies": {
+    "react": "~0.14",
+    "react-dom": "~0.14",
+    "react-redux": "~4.0",
+    "redux": "~3.0",
+    "lodash": "~4.11"
+  },
+  "devDependencies": {
+    "webpack": "~1.12",
+    "jsx-loader": "~0.13",
+    "file-loader": "~0.8",
+    "style-loader": "~0.13",
+    "css-loader": "~0.23"
+  },
+  "scripts": {
+    "compile": "./node_modules/webpack/bin/webpack.js --config ./js/webpack/compiler.js",
+    "watch": "./node_modules/webpack/bin/webpack.js --config ./js/webpack/compiler.js --watch"
+  },
+  "author": "Ibrahima SOW <isow@profideo.com>",
+  "license": "private"
+}
