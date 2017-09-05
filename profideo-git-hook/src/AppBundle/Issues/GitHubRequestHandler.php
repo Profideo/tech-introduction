@@ -39,7 +39,13 @@ class GitHubRequestHandler
      */
     public function handle(Request $request)
     {
-        $data = json_decode($request->getContent(), true);
+        $payload = $request->get('payload');
+        if ($payload) {
+            $data = json_decode($payload, true);
+        } else {
+            $data = json_decode($request->getContent(), true);
+        }
+
         if (null === $data) {
             throw new BadRequestHttpException('Invalid JSON body!');
         }

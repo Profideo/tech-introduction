@@ -33,7 +33,7 @@ class NewPRSubscriber implements EventSubscriberInterface
         }
 
         $pullRequestNumber = $data['pull_request']['number'];
-        $newStatus = Status::NEW_PR;
+        $newStatus = Status::NEEDS_REVIEW;
 
         $this->statusApi->setIssueStatus($pullRequestNumber, $newStatus, $repository);
 
